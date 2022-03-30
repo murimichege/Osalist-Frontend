@@ -1,0 +1,40 @@
+.key-container{
+  background-color: #f5f5ed;
+  position: relative;
+  height: 100vh;
+}
+.activate-logo-image{
+  width: 50;
+}
+.key_logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+}
+
+.key-input{
+  margin: auto;
+  display: block;
+  width: 250px;
+  min-height: 39px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  border: rgb(105, 104, 104) 3px;
+  padding: 12px 20px;
+
+}
+
+.activate-button button{
+  background-color: #023d51;
+  color: white;
+  border-radius: 18px;
+  width: 150px;
+  height: 40px;
+  
+
+}
+
+.activate-button {
+  margin-top: 70px;
+}

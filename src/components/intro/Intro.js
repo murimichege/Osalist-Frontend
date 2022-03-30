@@ -1,5 +1,7 @@
 import React from 'react'
 import GettingStarted from '../../icons/GettingStarted.png'
+import {Link} from 'react-router-dom'
+import './Intro.css'
 function Intro() {
     return (
         <div className='intro-container'>
@@ -16,7 +18,7 @@ function Intro() {
 
             </div>
             <div className='intro-button'>
-            <button>Get Started</button>
+            <button >Get Started</button>
                 
             </div>
             

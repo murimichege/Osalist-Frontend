@@ -36,41 +36,5 @@
     transform: rotate(360deg);
   }
 }
-.intro-container{
-  background-color: #f5f5ed;
-  position: relative;
-    height: 100vh;
-}
-.intro-logo-image{
- 
-  width: 50;
-}
-.intro-logo{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 400px;
-}
-.intro-caption{
-  margin-top: -88px;
-}
-.intro-caption h1{
-  font-family: helvaribold;
-  font-size: 50px;
-  color: #023d51
-  ;
-}
-.intro-caption p{
-  font-size: 20px;
-}
-.intro-button{
-  margin-top: 70px;
-}
-.intro-button button {
-  background-color: #023d51;
-  color: white;
-  border-radius: 18px;
-  width: 150px;
-  height: 40px;
 
-}
+
