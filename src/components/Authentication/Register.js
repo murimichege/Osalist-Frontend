@@ -1,6 +1,5 @@
 import { auto } from "async";
 import React from "react";
-import { Link } from "react-router-dom";
 import createprofile from "../../icons/createprofile.png";
 import './Auth.css'
 function CreateProfile() {

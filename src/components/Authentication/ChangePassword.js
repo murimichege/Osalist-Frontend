@@ -1,6 +1,5 @@
 import React from 'react'
 import Security from '../../icons/Security.png'
-import {Link } from 'react-router-dom'
 
 function ChangePassword() {
     return (
