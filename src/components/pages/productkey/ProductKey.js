@@ -1,5 +1,5 @@
 import React from "react";
-import Activate from "../../icons/Activate.png";
+import Activate from '../../../icons/Activate.png'
 import "./Productkey.css";
 function ProductKey() {
   return (

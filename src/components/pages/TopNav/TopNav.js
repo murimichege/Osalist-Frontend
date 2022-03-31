@@ -1,6 +1,7 @@
 import React from 'react'
+import './TopNav.css'
 
-function CreateBusinessProfile() {
+function TopNav() {
     return (
         <div>
             
@@ -8,4 +9,4 @@ function CreateBusinessProfile() {
     )
 }
 
-export default CreateBusinessProfile
+export default TopNav

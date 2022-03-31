@@ -1,0 +1,97 @@
+.login-container{
+    background-color: #f5f5ed;
+    position: relative;
+    height: 100vh;
+  }
+  .login-logo-image{
+    width: 50;
+  }
+  .login-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+  }
+  .register-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+  }
+  .register-caption{
+    margin-top:-135px ;
+  }
+  .register-caption h1{
+    font-family: helvaribold;
+    font-size: 50px;
+    color: #023d51
+    ;
+  }
+  input[type="file"] {
+    display: none;
+}
+
+  .welcome-caption{
+    margin-top: -45px;
+
+  }
+  .welcome-caption h1{
+    font-family: helvaribold;
+    font-size: 50px;
+    color: #023d51
+    ;
+  }
+  
+  .key-input{
+    margin: auto;
+    display: block;
+    width: 280px;
+    min-height: 46px;
+    margin-top: 15px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    outline: none;
+
+    border: rgb(105, 104, 104) 3px;
+    padding: 12px 20px;
+  
+  }
+  .register-input-upload{
+      
+  }
+  .register-input{
+    margin: auto;
+    display: block;
+    width: 280px;
+    min-height: 46px;
+    margin-top: 15px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    outline: none;
+    border: rgb(105, 104, 104) 3px;
+    padding: 12px 20px;
+  }
+  .register-logo-image{
+      margin-top: -100px;
+  }
+  .login-form{
+      margin-bottom: 20px;
+  }
+  
+  .activate-button button{
+    background-color: #023d51;
+    color: white;
+    border-radius: 18px;
+    width: 150px;
+    height: 40px;
+    margin-top: -15px;
+    
+  
+  }
+  
+  .activate-button {
+    margin-top: 70px;
+  }
+  .change-pass-form{
+
+  }
