@@ -4,7 +4,6 @@
     justify-content: center;
     display: flex;
     overflow: hidden;
-
 }
 .profile-container-left{
     margin-right: 10px;
@@ -13,6 +12,8 @@
     background-color: #f5f5ed;
     position: relative;
     height: 100vh;
+    text-align: center;
+
   }
 
   .login-logo-image{

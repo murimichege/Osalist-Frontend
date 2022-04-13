@@ -1,0 +1,18 @@
+.top-nav{
+margin-left: 40px;   
+display: flex; 
+}
+.avatar-thumbnail{
+    border-radius: 120px;
+    display: block;
+    margin: auto;
+    height: 50px;
+    width: 50px;
+}
+.top-nav-container{
+
+    margin-right: 93px;
+    float: right;
+    margin-top: 10px;
+}
+

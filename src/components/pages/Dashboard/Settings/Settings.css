@@ -1,0 +1,73 @@
+.Settings {
+  display: flex;
+  flex-direction: column;
+}
+.DateSettings{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 500px;
+  justify-content: center;
+  
+}
+
+.Settings a{
+text-decoration: none;
+margin-bottom: 10px;
+text-align: center;
+
+}
+
+.Settings-headers {
+  margin-top: 30px;
+  display: inline-block;
+  margin-left: 30px;
+}
+.Settings-headers h1 {
+  font-family: helvaribold;
+  font-size: 30px;
+  color: #023d51;
+}
+
+.Settings-headers h2 {
+  font-family: helvaribold;
+  font-size: 20px;
+  margin-top: 5px;
+  color: #023d51;
+}
+.fiscal-input-3 {
+    display: flex;
+    margin-top: 10px;
+    border: 2px solid #f5f5ed;
+  outline: none;
+  height: 40px;
+  width: 250px;
+  margin-right: 30px;
+  border-radius: 12px;
+}
+.fiscal-input {
+  border: 2px solid #f5f5ed;
+  outline: none;
+  height: 40px;
+  width: 250px;
+  margin-right: 30px;
+  border-radius: 8px;
+}
+.fiscal-year {
+  margin-left: 30px;
+}
+.fiscal-year-form button{
+    height: 33px;
+    width: 120px;
+    border-radius: 15px;
+    background-color: #023d51;
+    color: white;
+    outline: none;
+    margin-left: 500px;
+
+}
+.checkbox {
+  display: inline;
+  margin-left: 20px;
+
+}

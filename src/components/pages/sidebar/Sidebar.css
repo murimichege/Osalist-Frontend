@@ -1,0 +1,24 @@
+.sidebar-container {
+  width: 200px;
+  background-color: #f5f5ed;
+  position: relative;
+  height: 100vh;
+  box-shadow: #1d242d;
+  overflow-y: hidden;
+  left: 0;    
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  float: left;
+}
+.sidebar-item-name{
+  margin-top: 8px;
+  padding: 10px 25px;
+ color:  #023d51
+}
+.sidebar-item-name a {
+  text-decoration: none;
+}
+.logo{
+    margin-top: 24px;
+}

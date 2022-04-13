@@ -18,6 +18,7 @@ function CreateBusinessProfile() {
         <h1>Business Profile</h1>
         <p> Please tell us about you and your company</p>
       </div>
+      
       <div className="profile-form-container">
         <div className="profile-container-left">
           <form className="register-form">
