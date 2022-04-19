@@ -22,7 +22,7 @@ function Dashboard() {
             width="150px"
             height="120px"
           />
-          <Link to="/" className="path-name">
+          <Link to="/" >
             Customize Invoices
           </Link>
         </div>
@@ -35,7 +35,7 @@ function Dashboard() {
             height="120px"
           />
 
-          <Link to="/" className="path-name">
+          <Link to="/" >
             Add Users
           </Link>
         </div>
@@ -47,7 +47,7 @@ function Dashboard() {
             width="150px"
             height="120px"
           />
-          <Link to="/" className="path-name">
+          <Link to="/" >
             Customize Invoices
           </Link>
         </div>

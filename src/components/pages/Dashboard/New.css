@@ -1,0 +1,11 @@
+.new-item-links svg{
+    display: inline;
+    color: blue;
+    margin-right: 5px;
+    font-size: 24px;
+}
+.new-item-links a{
+    text-decoration: none;
+    display: flex;
+    color: blue;
+}

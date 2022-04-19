@@ -12,6 +12,8 @@ import DateSettings from '../components/pages/Dashboard/Settings/DateSettings'
 import SalesTax from '../components/pages/Dashboard/Settings/SalesTax'
 import InvoiceSettings from '../components/pages/Dashboard/Settings/InvoiceSettings'
 import QuotationSettings from '../components/pages/Dashboard/Settings/QuotationSettings'
+import New from '../components/pages/Dashboard/New.js'
+import Invoice from '../components/pages/Invoice/Invoice'
 
 function AppRoutes() {
     return (
@@ -29,6 +31,9 @@ function AppRoutes() {
             <Route path="/InvoiceSettings"  element={<InvoiceSettings/>}/>
             <Route path="/QuotationSettings"  element={<QuotationSettings/>}/>
             <Route path="/SalesTaxSettings"  element={<SalesTax/>}/>
+            <Route path="/New"  element={<New/>}/>
+            <Route path="/Invoice"  element={<Invoice/>}/>
+
 
         </Routes>
 

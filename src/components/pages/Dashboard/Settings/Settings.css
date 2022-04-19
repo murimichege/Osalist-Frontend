@@ -2,6 +2,17 @@
   display: flex;
   flex-direction: column;
 }
+.New-item-headers{
+  margin-top: 96px;
+  display: inline-block;
+  margin-left: 30px;
+}
+.New-item-headers h1 {
+  font-family: helvaribold;
+  font-size: 30px;
+  color: #023d51;
+}
+
 .DateSettings{
   display: flex;
   flex-direction: column;
