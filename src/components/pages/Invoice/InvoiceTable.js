@@ -55,7 +55,6 @@ function InvoiceTable() {
         title={"Invoices"}
         data={data}
         columns={columns}
-        options={options}
         
       />
       </div>

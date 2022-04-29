@@ -4,6 +4,7 @@ import Sidebar from '../sidebar/Sidebar'
 import TopNav from '../TopNav/TopNav'
 import '../Dashboard/New.css'
 import InvoiceTable from './InvoiceTable'
+import NewInvoiceTable from './NewInvoiceTable'
 import { BsPlus } from "react-icons/bs";
 function Invoice() {
     return (
@@ -18,10 +19,12 @@ function Invoice() {
           <div className="New-item-headers">
             <h1>Invoice</h1>
             <div className="new-item-links">
-           <Link to =""> <BsPlus/>New Invoice</Link>
+            <div className="new-item-links">
+            <Link to ="/NewInvoice"> <BsPlus/>New Invoice</Link>
+            </div>
             </div>
             <div>
-            <InvoiceTable/>
+            <NewInvoiceTable/>
             </div>
           </div>
         </div>

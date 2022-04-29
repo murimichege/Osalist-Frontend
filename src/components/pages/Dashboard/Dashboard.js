@@ -18,42 +18,49 @@ function Dashboard() {
           <img
             src={businessprofile}
             alt=""
-            className="dashboard-logo-image"
             width="150px"
             height="120px"
           />
+          <div className="image-caption">
           <Link to="/" >
             Customize Invoices
           </Link>
+          </div>
+
+         
         </div>
         <div className="dashboard-card-image">
           <img
             src={businessprofile}
             alt=""
-            className="dashboard-logo-image"
             width="150px"
             height="120px"
           />
-
+          <div className="image-caption">
           <Link to="/" >
             Add Users
           </Link>
+          </div>
+
+         
         </div>
         <div className="dashboard-card-image">
           <img
             src={businessprofile}
             alt=""
-            className="dashboard-logo-image"
             width="150px"
             height="120px"
           />
+         <div className="image-caption">
           <Link to="/" >
-            Customize Invoices
+            Set up charts for accounts
           </Link>
+          </div>
         </div>
       </div>
-      <button>Not Now</button>
-    </div>
+      <div className="dashboard-button">
+        <button>Not now</button>
+      </div>    </div>
   );
 }
 

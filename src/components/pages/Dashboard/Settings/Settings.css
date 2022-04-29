@@ -22,10 +22,17 @@
   
 }
 
-.Settings a{
-text-decoration: none;
-margin-bottom: 10px;
-text-align: center;
+.DateSettings a{
+  text-decoration: none;
+  margin-bottom: 10px;
+  text-align: center;
+  background: #023d51;
+  color: white;
+  height: 40px;
+  width: 250px;
+  border: 0;
+  border-radius: 22px;
+  
 
 }
 
@@ -75,6 +82,7 @@ text-align: center;
     color: white;
     outline: none;
     margin-left: 500px;
+    border: 0;
 
 }
 .checkbox {
