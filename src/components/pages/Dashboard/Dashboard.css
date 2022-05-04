@@ -1,6 +1,6 @@
 .dashboard-cards{
     width: 800px;
-    height: 600px;
+    /*height: 600px;*/
     overflow: hidden;
     padding: 1% 0 0 1%;
     display: flex;
@@ -38,9 +38,20 @@
 
 }
 .dashboard-button{
+    
+    
+    
+    margin-top: 100px;
+    margin-left: 16.5em;
+
+}
+.dashboard-button button{
+    width: 120px;
+    height: 30px;
     background-color: #023d51;
     border-radius: 28px;
     border: 0;
-    height: 30px;
-    width: 80px;
+    color: white;
+
+
 }

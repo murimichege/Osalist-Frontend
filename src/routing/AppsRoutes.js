@@ -35,7 +35,7 @@ function AppRoutes() {
             <Route path="/New"  element={<New/>}/>
             <Route path="/Invoice"  element={<Invoice/>}/>
             <Route path ="/NewInvoice" element={<NewInvoice/>}/>
-            <Route path="/Bill" element={<Bill/>}/>
+            <Route path="/Bills" element={<Bill/>}/>
 
 
 

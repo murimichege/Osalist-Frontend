@@ -1,7 +1,7 @@
 export const sideitems = [
     {
         name: 'Dashboard',
-        route: '/Dashboard'
+        route: '/'
     },
     {
         name: 'Products',

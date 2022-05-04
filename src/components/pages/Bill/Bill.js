@@ -19,8 +19,8 @@ function Bill() {
         </div>
         <div className="New-item">
           <div className="New-item-headers">
-            <h1>Bill</h1>
-            <div className="new-item-links" style={{ marginLeft: "35px" }}>
+            <h1>Bills</h1>
+            <div className="new-item-links" style={{ marginLeft: "-10px" }}>
               <Button  onClick={() => setOpenModal(true)}>
                 {" "}
                 <BsPlus />

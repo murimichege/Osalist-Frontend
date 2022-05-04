@@ -13,56 +13,42 @@ function Dashboard() {
       <div>
         <TopNav />
       </div>
-                  <h1>Invoice</h1>
-
+      <div className="New-item-headers">
+        <h1>Welcome to your accounting</h1>
+      </div>
       <div className="dashboard-cards">
         <div className="dashboard-card-image">
-          <img
-            src={businessprofile}
-            alt=""
-            width="150px"
-            height="120px"
-          />
-          <div className="image-caption">
-          <Link to="/" >
-            Customize Invoices
-          </Link>
-          </div>
+          <div className="image-container">
+          <img src={businessprofile} alt="" width="150px" height="120px" />
 
-         
+          </div>
+          <div className="image-caption">
+            <Link to="/">Customize Invoices</Link>
+          </div>
         </div>
         <div className="dashboard-card-image">
-          <img
-            src={businessprofile}
-            alt=""
-            width="150px"
-            height="120px"
-          />
-          <div className="image-caption">
-          <Link to="/" >
-            Add Users
-          </Link>
-          </div>
+        <div className="image-container">
 
-         
+          <img src={businessprofile} alt="" width="150px" height="120px" />
+          </div>
+          <div className="image-caption">
+            <Link to="/">Add Users</Link>
+          </div>
         </div>
         <div className="dashboard-card-image">
-          <img
-            src={businessprofile}
-            alt=""
-            width="150px"
-            height="120px"
-          />
-         <div className="image-caption">
-          <Link to="/" >
-            Set up charts for accounts
-          </Link>
+        <div className="image-container">
+
+          <img src={businessprofile} alt="" width="150px" height="120px" />
+          </div>
+          <div className="image-caption">
+            <Link to="/">Set up charts for accounts</Link>
           </div>
         </div>
       </div>
       <div className="dashboard-button">
         <button>Not now</button>
-      </div>    </div>
+      </div>
+    </div>
   );
 }
 
