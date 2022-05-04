@@ -14,7 +14,7 @@ function Sidebar() {
             </div>
                 {
                     sideitems.map((item, index) => (
-                        <Link to ={ item.route} key={index} style={{ textDecoration: 'none',  }}>
+                        <Link to ={ item.route} key={index} style={{ textDecoration: 'none' }}>
                             <SidebarItem 
                             title={item.name}
                             />

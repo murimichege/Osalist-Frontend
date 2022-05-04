@@ -1,42 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "./NewInvoiceTable.css";
+import data from './mock.json'
 function NewInvoiceTable() {
-  const data = [
-    
-    {
-      InvoiceNo: "Anom",
-      status: "overdue",
-      client: "eddie",
-      due: "14 days",
-      Paid: "150,000",
-      Balance: "30,000",
-      Actions: "",
-    },
-    {
-      InvoiceNo: "Anom",
-      status: "overdue",
-      client: "eddie",
-      due: "14 days",
-      Paid: "150,000",
-      Balance: "30,000",
-      Actions: "",
-    },
-    {
-      InvoiceNo: "Anom",
-      status: "overdue",
-      client: "eddie",
-      due: "14 days",
-      Paid: "150,000",
-      Balance: "30,000",
-      Actions: "",
-    },
-    
-    
-  ];
+  const [items, setItems] = useState(data)
+  const [addFormData, setFormData] = useState()
+
 
   return (
     <div className="container">
       <table>
+        <thead>
         <tr>
           <th>Invoice#</th>
           <th>Status</th>
@@ -47,20 +20,24 @@ function NewInvoiceTable() {
           <th>Balance</th>
           <th>Actions</th>
         </tr>
-        {data.map((key, item) => {
-          return (
-            <tr key={key} value={item}>
-              <td>{item.InvoiceNo}</td>
-              <td>{item.status}</td>
-              <td>{item.client}</td>
-              <td>{item.due}</td>
-              <td>{item.Amount}</td>
-              <td>{item.Paid}</td>
-              <td>{item.Balance}</td>
-              <td>{item.Actions}</td>
+        </thead>
+        <tbody>
+        {items && items.map((value) => 
+           (
+            <tr>
+              <td>{value.InvoiceNo}</td>
+              <td>{value.status}</td>
+              <td>{value.client}</td>
+              <td>{value.due}</td>
+              <td>{value.Amount}</td>
+              <td>{value.Paid}</td>
+              <td>{value.Balance}</td>
+              <td>{value.Actions}</td>
             </tr>
-          );
-        })}
+           )
+        )
+           }
+        </tbody>
       </table>
     </div>
   );

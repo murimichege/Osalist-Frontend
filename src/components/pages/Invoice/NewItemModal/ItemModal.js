@@ -5,7 +5,7 @@ function ItemModal({ setItemModelOpen }) {
     <div className="modalBackground">
       <div className="modalContainer">
         <div className="modal-title" >
-          <h1>Send this Invoice</h1>
+          <h1 style={{color:"black"}}>Send this Invoice</h1>
         </div>
         <div className="modal-form-container">
           <div className="modal-container-left">
@@ -46,7 +46,7 @@ function ItemModal({ setItemModelOpen }) {
           </div>
         </div>
         <div className="item-modal-buttons">
-        <button onClick={() => setItemModelOpen(true)}>Cancel</button>
+        <button onClick={() => setItemModelOpen(false)}>Cancel</button>
         <button>Send as PDF</button>
       </div>
       </div>

@@ -15,6 +15,7 @@ import QuotationSettings from '../components/pages/Dashboard/Settings/QuotationS
 import New from '../components/pages/Dashboard/New.js'
 import Invoice from '../components/pages/Invoice/Invoice'
 import NewInvoice from '../components/pages/Invoice/NewInvoice'
+import Bill from '../components/pages/Bill/Bill'
 function AppRoutes() {
     return (
         <BrowserRouter>
@@ -34,6 +35,8 @@ function AppRoutes() {
             <Route path="/New"  element={<New/>}/>
             <Route path="/Invoice"  element={<Invoice/>}/>
             <Route path ="/NewInvoice" element={<NewInvoice/>}/>
+            <Route path="/Bill" element={<Bill/>}/>
+
 
 
         </Routes>

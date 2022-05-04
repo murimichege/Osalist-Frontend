@@ -3,11 +3,11 @@ import Sidebar from "../sidebar/Sidebar";
 import TopNav from "../TopNav/TopNav";
 import { Link } from "react-router-dom";
 import { Button } from "@mui/material";
-import InvoiceTable from "./InvoiceTable";
 import { BsPlus } from "react-icons/bs";
 import fake_logo from "../../../icons/fake_logo.png";
 import AddClientModal from "./Client_Modal/Add_Client_Modal";
 import ItemModal from "./NewItemModal/ItemModal";
+
 function NewInvoice() {
   const [subtotal, setSubtotal] = useState("0000000");
   const [modalIsOpen, setIsOpen] = useState(false);
@@ -59,13 +59,16 @@ function NewInvoice() {
                   />}
                 
             </div>
-            <form className="new-invoice-form">
+            <form className="new-invoice-form">              
+            <label for="address">Invoice #</label>
+
               <input
                 className="fiscal-input"
                 id="key"
                 label="Product Key"
                 placeholder="1"
               />
+             <label for="address">Invoice Date</label>
               <input
                 className="fiscal-input"
                 id="key"
@@ -112,7 +115,7 @@ function NewInvoice() {
                 <Button  onClick={() => setIsOpen(true)}>
                   {" "}
                   <BsPlus />
-                  Add an Item
+                  Add VAT
                   </Button>
 
                 
@@ -123,7 +126,7 @@ function NewInvoice() {
                 <Button  onClick={() => setIsOpen(true)}>
                   {" "}
                   <BsPlus />
-                  Add an Item
+                  Add discount
                   </Button>
               
               </div>
