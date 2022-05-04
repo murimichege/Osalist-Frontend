@@ -13,7 +13,7 @@ export const sideitems = [
     },
     {
         name: 'Invoices',
-        route: '/Invoices'
+        route: '/Invoice'
     },
     {
         name: 'Bills',

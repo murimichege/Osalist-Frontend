@@ -13,6 +13,8 @@ function Dashboard() {
       <div>
         <TopNav />
       </div>
+                  <h1>Invoice</h1>
+
       <div className="dashboard-cards">
         <div className="dashboard-card-image">
           <img

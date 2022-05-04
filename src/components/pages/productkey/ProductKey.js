@@ -1,7 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+
 import Activate from '../../../icons/Activate.png'
 import "./Productkey.css";
 function ProductKey() {
+  const navigate = useNavigate()
   return (
     <div className="key-container">
       <div className="key_logo">
@@ -16,7 +19,7 @@ function ProductKey() {
       </form>
       
       <div className='activate-button'>
-            <button >Activate</button>  
+            <button  onClick={() => navigate("/login")}>Activate</button>  
             </div>
     </div>
   );

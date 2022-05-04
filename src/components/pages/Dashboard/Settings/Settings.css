@@ -71,6 +71,9 @@
   margin-right: 30px;
   border-radius: 8px;
 }
+.fiscal-input:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2); 
+}
 .fiscal-year {
   margin-left: 30px;
 }

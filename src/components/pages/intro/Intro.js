@@ -1,7 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+
 import GettingStarted from '../../../icons/GettingStarted.png'
 import "./Intro.css";
 function Intro() {
+  const navigate = useNavigate()
   return (
     <div className="intro-container">
       <div className="intro-logo">
@@ -13,7 +16,7 @@ function Intro() {
 
       </div>
       <div className="intro-button">
-        <button>Get Started</button>
+        <button onClick={() => navigate("/ProductKey")}>Get Started</button>
       </div>
     </div>
   );

@@ -1,8 +1,10 @@
 import React from "react";
+import {useNavigate} from 'react-router-dom'
 import { Link } from "react-router-dom";
 import Welcome from "../../icons/Welcome.png";
 import "./Auth.css";
 function Login() {
+  const navigate = useNavigate()
   return (
     <div className="login-container">
       <div className="login-logo">
@@ -29,7 +31,7 @@ function Login() {
       <Link to="/ChangeCredentials"> Forgot Username/Password</Link>
 
       <div className="activate-button">
-        <button>Login</button>
+        <button onClick={() => navigate("/")}>Login</button>
       </div>
     </div>
   );

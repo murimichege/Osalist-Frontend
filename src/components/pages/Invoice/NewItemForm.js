@@ -18,8 +18,8 @@ function NewItemForm() {
       Rate: "",
       Amount:""
     });
-  
-    const [editContactId, setEditContactId] = useState(null);
+      
+    const [editItemId, setEditItemId] = useState(null);
   
     const handleAddFormChange = (event) => {
       event.preventDefault();
@@ -48,7 +48,7 @@ function NewItemForm() {
     const handleAddFormSubmit = (event) => {
       event.preventDefault();
   
-      const newContact = {
+      const newItem = {
         id: Math.floor(1000 + Math.random() * 9000),
         fullName: addFormData.fullName,
         address: addFormData.address,
@@ -56,15 +56,15 @@ function NewItemForm() {
         email: addFormData.email,
       };
   
-      const newContacts = [...items, newContact];
-      setItems(newContacts);
+      const newItems = [...items, newItem];
+      setItems(newItems);
     };
   
     const handleEditFormSubmit = (event) => {
       event.preventDefault();
   
-      const editedContact = {
-        id: editContactId,
+      const editedItem = {
+        id: editItemId,
         item: editFormData.item,
         Description: editFormData.Description,
         Quantity: editFormData.Quantity,
@@ -73,19 +73,19 @@ function NewItemForm() {
 
       };
   
-      const newContacts = [...items];
+      const newItems = [...items];
   
-      const index = items.findIndex((contact) => contact.id === editContactId);
+      const index = items.findIndex((item) => item.id === editItemId);
   
-      newContacts[index] = editedContact;
+      newItems[index] = editedItem;
   
-      setItems(newContacts);
-      setEditContactId(null);
+      setItems(newItems);
+      setEditItemId(null);
     };
   
     const handleEditClick = (event, contact) => {
       event.preventDefault();
-      setEditContactId(contact.id);
+      setEditItemId(items.id);
   
       const formValues = {
         fullName: contact.fullName,
@@ -98,7 +98,7 @@ function NewItemForm() {
     };
   
     const handleCancelClick = () => {
-      setEditContactId(null);
+      setEditItemId(null);
     };
   
     const handleDeleteClick = (contactId) => {
