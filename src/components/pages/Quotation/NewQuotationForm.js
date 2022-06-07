@@ -1,8 +1,7 @@
-import React,{useState} from 'react'
-import NewInvoiceTable from './NewInvoiceTable';
-
-function NewItemForm() {
-    const [items, setItems] = useState();
+import React,{useState, useEffect} from 'react'
+import NewQuotationTable from './NewQuotationTable';
+function NewQuotationForm() {
+    const [items, setItems] = useState([]);
     const [addFormData, setAddFormData] = useState({
       item: "",
       Description: "",
@@ -10,6 +9,7 @@ function NewItemForm() {
       Rate: "",
       Amount:""
     });
+    const [addClient, setAddClient] = useState({client: ""})
   
     const [editFormData, setEditFormData] = useState({
       item: "",
@@ -57,6 +57,7 @@ function NewItemForm() {
       };
   
       const newItems = [...items, newItem];
+      console.log(newItems)
       setItems(newItems);
     };
   
@@ -113,12 +114,11 @@ function NewItemForm() {
     return (
 
       <div className="add-form">
-        <table>
-          <tbody>
-            {
-              items & items.map((items) => {
+        <fragment>
+        {
+             items.map((items) => {
                 return (
-                  <NewInvoiceTable
+                  <NewQuotationTable
                     items={items}
                     handleEditClick={handleEditClick}
                     handleDeleteClick={handleDeleteClick}
@@ -127,8 +127,11 @@ function NewItemForm() {
               })
             }
 
-          </tbody>
-        </table>
+
+        </fragment>
+       
+            
+        
          <form onSubmit={handleAddFormSubmit}>
         <input
           type="text"
@@ -187,4 +190,4 @@ function NewItemForm() {
     )
 }
 
-export default NewItemForm
+export default NewQuotationForm

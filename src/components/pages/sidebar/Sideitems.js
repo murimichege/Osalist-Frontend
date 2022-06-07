@@ -9,7 +9,7 @@ export const sideitems = [
     },
     {
         name: 'Quotation',
-        route: '/Quotation'
+        route: '/Quotations'
     },
     {
         name: 'Invoices',

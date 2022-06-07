@@ -1,13 +1,9 @@
-import React, { useState } from "react";
-import "./NewInvoiceTable.css";
-import data from './mock.json'
-function NewInvoiceTable() {
-  const [items, setItems] = useState(data)
-  const [addFormData, setFormData] = useState()
-
-
-  return (
-    <div className="container">
+import React,{useState} from 'react'
+import data from '../Invoice/mock.json'
+function NewQuotationTable() {
+   const [items, setItems] = React.useState(data)
+    return (
+      <div className="container">
       <table>
         <thead>
         <tr>
@@ -22,9 +18,9 @@ function NewInvoiceTable() {
         </tr>
         </thead>
         <tbody>
-        {items && items.map((value,index) => 
+        {items && items.map((value) => 
            (
-            <tr key={index}>
+            <tr>
               <td>{value.InvoiceNo}</td>
               <td>{value.status}</td>
               <td>{value.client}</td>
@@ -40,7 +36,7 @@ function NewInvoiceTable() {
         </tbody>
       </table>
     </div>
-  );
+    )
 }
 
-export default NewInvoiceTable;
+export default NewQuotationTable

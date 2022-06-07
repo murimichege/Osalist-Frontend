@@ -3,27 +3,27 @@ import { Link } from 'react-router-dom'
 import Sidebar from '../sidebar/Sidebar'
 import TopNav from '../TopNav/TopNav'
 import '../Dashboard/New.css'
-import InvoiceTable from './InvoiceTable'
-import NewInvoiceTable from './NewInvoiceTable'
+import NewQuotationTable from './NewQuotationTable'
 import { BsPlus } from "react-icons/bs";
-function Invoice() {
+function Quotations() {
     return (
         <div className="container">
         <div>
-          <Sidebar/>
-         
+          <Sidebar />
+          <div>
+            <TopNav />
+          </div>
         </div>
         <div className="New-item">
           <div className="New-item-headers">
-            <h1>Invoice</h1>
+            <h1>Quotations</h1>
             <div className="new-item-links">
             <div className="new-item-links">
-            <Link to ="/NewInvoice"> <BsPlus/>New Invoice</Link>
+            <Link to ="/NewQuotation"> <BsPlus/>New Quotation</Link>
             </div>
             </div>
             <div>
-            <NewInvoiceTable/>
-            
+            <NewQuotationTable/>
             </div>
           </div>
         </div>
@@ -31,4 +31,4 @@ function Invoice() {
     )
 }
 
-export default Invoice
+export default Quotations

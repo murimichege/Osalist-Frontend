@@ -1,28 +1,29 @@
 import React, { useState } from "react";
 import Sidebar from "../sidebar/Sidebar";
 import TopNav from "../TopNav/TopNav";
-import { Button } from "@mui/material";
+import { Link } from "react-router-dom";
+//import { Button } from "@mui/material";
 import { BsPlus } from "react-icons/bs";
 import fake_logo from "../../../icons/fake_logo.png";
-import AddClientModal from "./Client_Modal/Add_Client_Modal";
-import ItemModal from "./SendInvoice/ItemModal";
-import AddItem from "./AddItem/AddItem";
+import AddClientModal from "./NewQuotationItem/NewClient";
 
-function NewInvoice({  }) {
+function NewQuotation() {
   const [subtotal, setSubtotal] = useState("0000000");
   const [modalIsOpen, setIsOpen] = useState(false);
   const [itemModalOpen, setItemModelOpen] = useState(false);
-
-  const [itemOpen, setitemOpen] = useState(false);
 
   return (
     <div className="container">
       <div>
         <Sidebar />
+        <div>
+          <TopNav />
+        </div>
       </div>
+
       <div className="New-item">
         <div className="New-item-headers" style={{ marginTop: "15px" }}>
-          <h1>Invoice</h1>
+          <h1>Quotation</h1>
         </div>
         <div className="New-Invoice-container">
           <div className="New-Invoice-header">
@@ -30,7 +31,7 @@ function NewInvoice({  }) {
               <img src={fake_logo} alt="logo" />
             </div>
             <div className="New-Invoice-address">
-              <h2>Invoice</h2>
+              <h2>Quotation</h2>
               <div className="address">
                 <p>
                   Keystone Park, 3rd floor, Block A,
@@ -46,14 +47,15 @@ function NewInvoice({  }) {
           <div className="main-container">
             <h4>Bill to</h4>
             <div className="new-item-links" style={{ marginLeft: "35px" }}>
-              <Button onClick={() => setIsOpen(true)}>
+              <button onClick={() => setIsOpen(true)}>
+                {" "}
                 <BsPlus />
                 Add a Client
-              </Button>
+              </button>
               {modalIsOpen && <AddClientModal setIsOpen={setIsOpen} />}
             </div>
             <form className="new-invoice-form">
-              <label for="address">Invoice #</label>
+              <label for="address">Quotation #</label>
 
               <input
                 className="fiscal-input"
@@ -61,7 +63,7 @@ function NewInvoice({  }) {
                 label="Product Key"
                 placeholder="1"
               />
-              <label for="address">Invoice Date</label>
+              <label for="address">Quotation Date</label>
               <input
                 className="fiscal-input"
                 id="key"
@@ -81,20 +83,17 @@ function NewInvoice({  }) {
                     <th>Amount</th>
                   </tr>
                 </thead>
-                <tbody>
-                  
-                </tbody>
               </table>
             </div>
             <div
               className="new-item-links"
               style={{ marginLeft: "35px", marginTop: "35px" }}
             >
-              <Button onClick={() => setitemOpen(true)}>
+              <button onClick={() => setIsOpen(true)}>
+                {" "}
                 <BsPlus />
                 Add an Item
-                {itemOpen && <AddItem setitemOpen={setitemOpen} />}
-              </Button>
+              </button>
             </div>
             <hr style={{ align: "left", marginTop: "70px", width: "35% " }} />
 
@@ -108,17 +107,19 @@ function NewInvoice({  }) {
                 className="new-item-links"
                 style={{ marginLeft: "105px", marginTop: "35px" }}
               >
-                <Button onClick={() => setIsOpen(true)}>
+                <button onClick={() => setIsOpen(true)}>
+                  {" "}
                   <BsPlus />
                   Add VAT
-                </Button>
+                </button>
               </div>
 
               <div className="new-item-links" style={{ marginLeft: "105px" }}>
-                <Button onClick={() => setIsOpen(true)}>
+                <button onClick={() => setIsOpen(true)}>
+                  {" "}
                   <BsPlus />
                   Add discount
-                </Button>
+                </button>
               </div>
 
               <div className="new-invoice-total">
@@ -138,15 +139,18 @@ function NewInvoice({  }) {
           <div></div>
         </div>
         <div className="invoice-footer-buttons">
-          <Button>Save</Button>
-          <Button onClick={() => setItemModelOpen(true)}>
+          <button>Save</button>
+          <button onClick={() => setItemModelOpen(true)}>
+            {""}
             Send
-            {itemModalOpen && <ItemModal setItemModelOpen={setItemModelOpen} />}
-          </Button>
+            {itemModalOpen && (
+              <AddClientModal setItemModelOpen={setItemModelOpen} />
+            )}
+          </button>
         </div>
       </div>
     </div>
   );
 }
 
-export default NewInvoice;
+export default NewQuotation;

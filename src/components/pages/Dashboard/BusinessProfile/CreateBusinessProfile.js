@@ -1,5 +1,5 @@
 import React from "react";
-import businessprofile from '../../../icons/businessprofile.png'
+import businessprofile from '../../../../icons/businessprofile.png'
 import "./Profile.css";
 
 function CreateBusinessProfile() {
