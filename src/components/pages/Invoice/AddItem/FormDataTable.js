@@ -7,15 +7,15 @@ function FormDataTable() {
   
  
   const [tableData, setTableData] = useState([])
- const [formInputData, setformInputData] = useState(
-     {
-      item: '',
-      amount: '',
-      rate: '',
-      quantity: '',
-      description: '',
-    }
- );
+//  const [formInputData, setformInputData] = useState(
+//      {
+//       item: '',
+//       amount: '',
+//       rate: '',
+//       quantity: '',
+//       description: '',
+//     }
+//  );
  
 
   const handleChange=(evnt)=>{  
@@ -23,16 +23,27 @@ function FormDataTable() {
    setformInputData(newInput)
 }
  
-const handleSubmit= (evnt) =>{
+const handleSubmit= (item, amount, rate, quantity, description) =>{
     evnt.preventDefault();
-    const checkEmptyInput = !Object.values(formInputData).every(res=>res==="")
-    if(checkEmptyInput)
-    {
-     const newData = (data)=>([...data, formInputData])
-     setTableData(newData);
-     const emptyInput= {item:'', amount:'', rate:'', quantity: '',description:''}
-     setformInputData(emptyInput)
+    // const checkEmptyInput = !Object.values(formInputData).every(res=>res==="")
+    // if(checkEmptyInput)
+    // {
+    //  const newData = (data)=>([...data, formInputData])
+    //  setTableData(newData);
+    //  const emptyInput= {item:'', amount:'', rate:'', quantity: '',description:''}
+    //  setformInputData(emptyInput)
+    // }
+    const formInputData = {
+      item, 
+      amount, 
+      rate, 
+      quantity, 
+      description
     }
+    
+    setTableData((data) => {
+      [...data, formInputData]
+    })
 }  
 
 

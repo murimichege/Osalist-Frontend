@@ -2,6 +2,12 @@ import React, { useState } from "react";
 import NewInvoice from "../NewInvoice";
 import "./styles.css";
 function AddItem({ setitemOpen,handleChange, formInputData, handleSubmit }) {
+
+  const [item, setItem] = useState()
+  const [amount, setAmount] = useState()
+  const [rate, setRate] = useState()
+  const [quantity, setQuantity] = useState()
+  const [description, setDescription] = useState()
   
   return (
     <div className="modalBackground">
@@ -16,8 +22,8 @@ function AddItem({ setitemOpen,handleChange, formInputData, handleSubmit }) {
               <input
                 className="register-input"
                 name="item"
-                onChange={handleChange}
-                value={formInputData.item}
+                onChange={(e) => setItem(e.target.value)}
+                value={item}
                 placeholder="Item"
                
               />
@@ -25,29 +31,31 @@ function AddItem({ setitemOpen,handleChange, formInputData, handleSubmit }) {
               <input
                 className="register-input"
                 name="amount"
-                value={formInputData.amount}
+                value={amount}
                 placeholder="Amount"
-                onChange={handleChange}
+                onChange={(e) => setItem(e.target.value)}
               />
             </form>
           </div>
 
           <div className="profile-container-right">
-            <form className="register-form" onSubmit={handleSubmit}>
+            <form className="register-form" onSubmit={()=> handleSubmit(
+              item, amount,  rate, quantity, description
+            )}>
               <input
                 className="register-input"
                 placeholder="Rate"
                 name="rate"
-                value={formInputData.rate}
-                onChange={handleChange}
+                value={rate}
+                onChange={(e) => setItem(e.target.value)}
               />
               <input
                 className="register-input"
                 name="quantity"
                 placeholder="Quantity"
 
-                value={formInputData.quantity}
-                onChange={handleChange}
+                value={quantity}
+                onChange={(e) => setItem(e.target.value)}
               />
 
               <input
@@ -55,9 +63,9 @@ function AddItem({ setitemOpen,handleChange, formInputData, handleSubmit }) {
                 style={{ width: "600px", height: "80px" }}
                 type="text"
                 
-                value={formInputData.description}
+                value={description}
                 placeholder="Description"
-                onChange={handleChange}
+                onChange={(e) => setItem(e.target.value)}
               />
             </form>
           </div>
