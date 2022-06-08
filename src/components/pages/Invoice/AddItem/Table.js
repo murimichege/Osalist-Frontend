@@ -17,7 +17,7 @@ function Table({tableData}) {
             </thead>
             <tbody>
             {
-               tableData && tableData.map((data, index)=>{
+               tableData.map((data, index)=>{
                     return(
                         <tr key={index}>
                             <td>{data.item}</td>

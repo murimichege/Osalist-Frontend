@@ -7,23 +7,11 @@ function FormDataTable() {
   
  
   const [tableData, setTableData] = useState([])
-//  const [formInputData, setformInputData] = useState(
-//      {
-//       item: '',
-//       amount: '',
-//       rate: '',
-//       quantity: '',
-//       description: '',
-//     }
-//  );
+console.log(tableData)
  
 
-  const handleChange=(evnt)=>{  
-    const newInput = (data)=>({...data, [evnt.target.name]:evnt.target.value})
-   setformInputData(newInput)
-}
  
-const handleSubmit= (item, amount, rate, quantity, description) =>{
+const handleSubmit= (evnt,item, amount, rate, quantity, description) =>{
     evnt.preventDefault();
     // const checkEmptyInput = !Object.values(formInputData).every(res=>res==="")
     // if(checkEmptyInput)
@@ -41,9 +29,7 @@ const handleSubmit= (item, amount, rate, quantity, description) =>{
       description
     }
     
-    setTableData((data) => {
-      [...data, formInputData]
-    })
+    setTableData(formInputData)
 }  
 
 
@@ -51,8 +37,8 @@ const handleSubmit= (item, amount, rate, quantity, description) =>{
     <React.Fragment>
     <div className="container">
     <div className="row">
-        <AddItem handleChange={handleChange} formInputData={formInputData} handleSubmit={handleSubmit}/>
-        <Table tableData={tableData}/>
+        <AddItem  handleSubmit={handleSubmit}/>
+        <NewInvoice tableData={tableData}/>
         
     </div>
    </div>
