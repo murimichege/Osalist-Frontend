@@ -7,6 +7,7 @@ import InvoiceTable from './InvoiceTable'
 import NewInvoiceTable from './NewInvoiceTable'
 import { BsPlus } from "react-icons/bs";
 function Invoice() {
+  
     return (
         <div className="container">
         <div>

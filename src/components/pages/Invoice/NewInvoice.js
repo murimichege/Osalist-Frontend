@@ -6,14 +6,14 @@ import { BsPlus } from "react-icons/bs";
 import fake_logo from "../../../icons/fake_logo.png";
 import AddClientModal from "./Client_Modal/Add_Client_Modal";
 import ItemModal from "./SendInvoice/ItemModal";
-import AddItem from "./AddItem/AddItem";
-
-function NewInvoice({  tableData}) {
+import AddItem from "./AddItem/AddItemForm";
+import FormDataTable from "./AddItem/FormDataTable";
+function NewInvoice({ tableData }) {
   const [subtotal, setSubtotal] = useState("0000000");
   const [modalIsOpen, setIsOpen] = useState(false);
   const [itemModalOpen, setItemModelOpen] = useState(false);
-
   const [itemOpen, setitemOpen] = useState(false);
+
 
   return (
     <div className="container">
@@ -71,32 +71,7 @@ function NewInvoice({  tableData}) {
             </form>
 
             <div className="new-invoice-client">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Item</th>
-                    <th>Description</th>
-                    <th>Qty</th>
-                    <th>Rate</th>
-                    <th>Amount</th>
-                  </tr>
-                </thead>
-                <tbody>
-                {
-               tableData && tableData.map((data, index)=>{
-                    return(
-                        <tr key={index}>
-                            <td>{data.item}</td>
-                            <td>{data.amount}</td>
-                            <td>{data.rate}</td>
-                            <td>{data.quantity}</td>
-                            <td>{data.description}</td>
-                        </tr>
-                    )
-                })
-            }
-                </tbody>
-              </table>
+              <FormDataTable />
             </div>
             <div
               className="new-item-links"
