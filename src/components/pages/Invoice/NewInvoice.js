@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Sidebar from "../sidebar/Sidebar";
 import TopNav from "../TopNav/TopNav";
 import { Button } from "@mui/material";
@@ -8,12 +8,19 @@ import AddClientModal from "./Client_Modal/Add_Client_Modal";
 import ItemModal from "./SendInvoice/ItemModal";
 import AddItem from "./AddItem/AddItemForm";
 import FormDataTable from "./AddItem/FormDataTable";
-function NewInvoice({ tableData }) {
+//import { InvoiceItemProvider } from "./AddItem/InvoiceItemContext";
+
+function NewInvoice(props) {
   const [subtotal, setSubtotal] = useState("0000000");
   const [modalIsOpen, setIsOpen] = useState(false);
   const [itemModalOpen, setItemModelOpen] = useState(false);
   const [itemOpen, setitemOpen] = useState(false);
-
+  const [formModal, setFormModal] = useState(false);
+  const [invoiceNo, setInvoiceNo] = useState();
+  const [formTable, setFormTable] = useState(true);
+  // useEffect(() => {
+  //   setitemOpen(false)
+  // },[])
 
   return (
     <div className="container">
@@ -58,6 +65,7 @@ function NewInvoice({ tableData }) {
               <input
                 className="fiscal-input"
                 id="key"
+                //value={}
                 label="Product Key"
                 placeholder="1"
               />
@@ -70,18 +78,16 @@ function NewInvoice({ tableData }) {
               />
             </form>
 
+            
             <div className="new-invoice-client">
-              <FormDataTable />
+            <FormDataTable itemOpen={itemOpen} setitemOpen={setitemOpen} />
             </div>
             <div
               className="new-item-links"
               style={{ marginLeft: "35px", marginTop: "35px" }}
             >
-              <Button onClick={() => setitemOpen(true)}>
-                <BsPlus />
-                Add an Item
-                {itemOpen && <AddItem setitemOpen={setitemOpen} />}
-              </Button>
+                      <Button onClick={() => setitemOpen(true)}>Add an Item</Button>
+
             </div>
             <hr style={{ align: "left", marginTop: "70px", width: "35% " }} />
 

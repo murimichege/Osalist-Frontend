@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import NewInvoice from "../NewInvoice";
 import AddItem from "./AddItemForm";
 import Table from "./Table";
 
-function FormDataTable() {
+function FormDataTable(props) {
   const [tableData, setTableData] = useState([]);
+  const { itemOpen } = props;
+
+  const [showForm, setshowForm] = useState(false)
   // console.log(tableData)
 
   const tableRows = tableData.map((value, index) => {
@@ -24,23 +27,36 @@ function FormDataTable() {
     const updatedtableData = [...tableData];
     updatedtableData.push(data);
     setTableData(updatedtableData);
+
+    props.setitemOpen(false);
   };
+
+  // useEffect(() => {
+  //   const json = JSON.stringify(tableRows);
+  //   localStorage.setItem("tableRows", json);
+  // }, [tableRows]);
 
   return (
     <React.Fragment>
-      <table className="table">
-        <thead>
-          <tr>
-            <th>Item</th>
-            <th>Description</th>
-            <th>Qty</th>
-            <th>Rate</th>
-            <th>Amount</th>
-          </tr>
-        </thead>
-        <tbody>{tableRows}</tbody>
-      </table>
-      <AddItem func={addRows} />
+      
+          <table className="table">
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Description</th>
+              <th>Qty</th>
+              <th>Rate</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+          <tbody>{tableRows}</tbody>
+        </table>
+
+
+        {itemOpen && <AddItem func={addRows} />}
+
+   
+      
     </React.Fragment>
   );
 }

@@ -26,18 +26,18 @@ function AddItem(props) {
       description,
     };
     props.func(formInputData);
-    clearState();
+    //props.modalClose()
   };
 
   return (
-    <div className="modalBackground">
+   <div className="modalBackground">
       <div className="modalContainer">
         <div className="title">
           <h1>New Item</h1>
         </div>
 
         <div className="modal-form-container">
-          <form className="register-form">
+          <form className="register-form" onSubmit={handleSubmit}>
             <input
               className="register-input"
               name="item"
@@ -80,9 +80,14 @@ function AddItem(props) {
 
             <div className="modal-buttons" style={{ justifyContent: "center" }}>
               <button onClick={handleSubmit}>Save</button>
+              <button onClick={() => {
+                props.setitemOpen(false);
+                clearState()
+                
+                }}>cancel</button>
             </div>
           </form>
-          <button onClick={() => props.setitemOpen(false)}>cancel</button>
+         
 
         </div>
       </div>

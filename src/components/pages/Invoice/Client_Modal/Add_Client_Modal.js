@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import Modal from "react-bootstrap/Modal";
 
 function AddClientModal({ setIsOpen }) {
+  const [businessName, setBusinessName] = useState("")
+
+  const handleSubmit = (event) => {
+    event.preventDefault()
+  }
   return (
     <div className="modalBackground">
       <div className="modalContainer">
@@ -35,12 +40,14 @@ function AddClientModal({ setIsOpen }) {
 
         <div className="modal-form-container">
           <div className="modal-container-left">
-            <form className="register-form">
+            <form className="register-form" onSubmit={handleSubmit}>
               <label for="address">Client</label>
               <input
                 className="register-input"
                 id="address"
                 placeholder="Name of the business or person  "
+                value={businessName}
+                onChange={(e) => e.target.value}
               />
               <label for="address">Primary Contact</label>
 
@@ -89,7 +96,7 @@ function AddClientModal({ setIsOpen }) {
 
           <div className="modal-buttons">
         <button onClick={() => setIsOpen(false)}>cancel</button>
-        <button>Save</button>
+        <button type="submit">Save</button>
       </div>
     
 
