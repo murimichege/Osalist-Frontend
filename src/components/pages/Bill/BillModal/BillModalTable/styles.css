@@ -1,0 +1,20 @@
+.new-bill-container{
+    display: flex;
+}
+.new-bill-container label{
+    color: "black" 
+}
+
+.register-input{
+    
+}
+
+.new-bill-container2{
+    
+}
+
+.form-control{
+    background-color: #f5f5ed;
+    border: 0;
+    outline: none;
+}

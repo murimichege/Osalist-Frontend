@@ -1,4 +1,5 @@
 import React from "react";
+import { Box, Button, FormControl, TextField } from "@mui/material";
 
 function ItemModal({ setItemModelOpen }) {
   return (
@@ -42,13 +43,14 @@ function ItemModal({ setItemModelOpen }) {
                 type="password"
                 placeholder="Phone"
               />
-            </form>
-          </div>
-        </div>
-        <div className="item-modal-buttons">
+              <div className="item-modal-buttons">
         <button onClick={() => setItemModelOpen(false)}>Cancel</button>
         <button>Send as PDF</button>
       </div>
+            </form>
+          </div>
+        </div>
+        
       </div>
     </div>
   );

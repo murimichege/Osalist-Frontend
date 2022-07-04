@@ -103,16 +103,11 @@
   }
 
   .register-input{
-    border: 1px solid #f5f5ed ;
-    outline: none;
+    border: 3px solid #f5f5ed ;
+  
     display: block;
 }
-.label{
-  display: block;
-}
-.modal-buttons{
-  display: flex;
-}
+
 .modal-buttons button{
   background-color: #023d51;
   color: white;
@@ -122,5 +117,7 @@
   border: 0;
   float: right;
   margin-top: 110px;
-margin-left: 10px;
+}
+.modal-container-right-lower{
+  margin-top: 32px;
 }

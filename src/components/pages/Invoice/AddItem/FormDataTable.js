@@ -53,7 +53,7 @@ function FormDataTable(props) {
         </table>
 
 
-        {itemOpen && <AddItem func={addRows} />}
+        {itemOpen && <AddItem show={itemOpen} func={addRows} />}
 
    
       

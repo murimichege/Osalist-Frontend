@@ -1,12 +1,20 @@
 import React, { useState } from "react";
 import NewInvoice from "../NewInvoice";
+import { Box, Button, FormControl, TextField, Grid } from "@mui/material";
+import { LoadingButton } from "@mui/lab";
+
+import CustomDialog from "../../../CustomDialog/CustomDialog";
 import "./styles.css";
+
+
 function AddItem(props) {
   const [item, setItem] = useState("");
   const [amount, setAmount] = useState("");
   const [rate, setRate] = useState("");
   const [quantity, setQuantity] = useState("");
   const [description, setDescription] = useState("");
+  const [nameErr, setNameErr] = useState(false)
+  const [onSubmit, setOnSubmit] = useState(false)
 
   const clearState = () => {
     setItem("");
@@ -26,72 +34,109 @@ function AddItem(props) {
       description,
     };
     props.func(formInputData);
-    //props.modalClose()
-  };
+
+  }
 
   return (
-   <div className="modalBackground">
-      <div className="modalContainer">
-        <div className="title">
-          <h1>New Item</h1>
-        </div>
-
-        <div className="modal-form-container">
-          <form className="register-form" onSubmit={handleSubmit}>
-            <input
-              className="register-input"
-              name="item"
+    <CustomDialog
+      open={props.show}
+      title="New Item"
+      content={
+        <Box padding="3px 0" width='550px' height='300px'>
+          <FormControl onSubmit={handleSubmit}>
+            <Grid className="item-outline" spacing={5}>
+            <TextField
+              label="Item"
+              variant="outlined"
+              type="text"
+               inputProps={{
+                style: {
+                  marginLeft:"8px"
+                },
+               }}
               onChange={(e) => setItem(e.target.value)}
               value={item}
-              placeholder="Item"
+              error={nameErr}
             />
 
-            <input
-              className="register-input"
-              name="amount"
-              value={amount}
-              placeholder="Amount"
-              onChange={(e) => setAmount(e.target.value)}
-            />
-
-            <input
-              className="register-input"
-              placeholder="Rate"
-              name="rate"
-              value={rate}
-              onChange={(e) => setRate(e.target.value)}
-            />
-            <input
-              className="register-input"
-              name="quantity"
-              placeholder="Quantity"
-              value={quantity}
-              onChange={(e) => setQuantity(e.target.value)}
-            />
-
-            <input
-              className="register-input"
-              style={{ width: "600px", height: "80px" }}
+            <TextField
+              label="Quantity"
+              variant="outlined"
               type="text"
-              value={description}
-              placeholder="Description"
-              onChange={(e) => setDescription(e.target.value)}
+              onChange={(e) => setAmount(e.target.value)}
+              inputProps={{
+                style: {
+                  marginLeft:"8px"
+                },
+               }}
+              value={amount}
+              error={nameErr}
             />
 
-            <div className="modal-buttons" style={{ justifyContent: "center" }}>
-              <button onClick={handleSubmit}>Save</button>
-              <button onClick={() => {
-                props.setitemOpen(false);
-                clearState()
-                
-                }}>cancel</button>
-            </div>
-          </form>
-         
 
-        </div>
-      </div>
-    </div>
+            </Grid>
+            <div className="item-outline">
+            <TextField
+              label="Rate"
+              variant="outlined"
+              type="text"
+              onChange={(e) => setRate(e.target.value)}
+              value={rate}
+              error={nameErr}
+            />
+            <TextField
+              label="Amount"
+              variant="outlined"
+              type="text"
+              onChange={(e) => setQuantity(e.target.value)}
+              value={quantity}
+              error={nameErr}
+            />
+            </div>
+           
+           
+            <TextField
+              label="Description"
+              variant="outlined"
+              type="text"
+              inputProps={{
+                style: {
+                  height: "100px",
+                },
+              }}
+              onChange={(e) => setDescription(e.target.value)}
+              value={description}
+              error={nameErr}
+            />
+          </FormControl>
+        </Box>
+        
+      }
+      actions={
+        <Box
+          width="100%"
+          sx={{
+            display: "flex",
+            justifyContent: "flex-end",
+          }}
+        >
+         <Button
+                  variant='text'
+                  open={() => props.show(false)}
+                  >
+                  Cancel
+              </Button>
+           
+          <LoadingButton
+            variant="contained"
+            onClick={handleSubmit}
+//loading={handleSubmit}
+          >
+            Save
+          </LoadingButton>
+        </Box>
+      }
+    />
   );
 }
 export default AddItem;

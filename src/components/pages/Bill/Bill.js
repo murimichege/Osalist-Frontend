@@ -4,7 +4,7 @@ import TopNav from '../TopNav/TopNav'
 import '../Dashboard/New.css'
 import NewBillTable from './NewBillTable'
 import { BsPlus } from "react-icons/bs";
-import NewBillModal from './NewBillModal'
+import NewBillModal from './BillModal/NewBillModal'
 import { Button } from "@mui/material";
 
 function Bill() {
